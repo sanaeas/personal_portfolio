@@ -46,7 +46,7 @@ function About() {
                                 className="card__img"
                             />
                         </figure>
-                        <h3 className="card__name html">HTML</h3>
+                        <h3 className="card__name HTML">HTML</h3>
                     </div>
 
                     <div className="card">
@@ -57,7 +57,7 @@ function About() {
                                 className="card__img"
                             />
                         </figure>
-                        <h3 className="card__name css">CSS</h3>
+                        <h3 className="card__name CSS">CSS</h3>
                     </div>
 
                     <div className="card">
