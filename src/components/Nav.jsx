@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 
@@ -13,18 +13,34 @@ function Nav() {
     return (
         <nav className={`navbar ${isOpen ? "open" : ""}`}>
             <ul className={`navbar__list ${isOpen ? "open" : ""}`}>
-                <Link className="active" to="/">
+                <NavLink
+                    className={({ isActive }) => {
+                        return isActive ? "active" : "";
+                    }}
+                    to="/">
                     <li>Home</li>
-                </Link>
-                <Link to="/about">
+                </NavLink>
+                <NavLink
+                    className={({ isActive }) => {
+                        return isActive ? "active" : "";
+                    }}
+                    to="/about">
                     <li>About</li>
-                </Link>
-                <Link to="/projects">
+                </NavLink>
+                <NavLink
+                    className={({ isActive }) => {
+                        return isActive ? "active" : "";
+                    }}
+                    to="/projects">
                     <li>Projects</li>
-                </Link>
-                <Link to="/contact">
+                </NavLink>
+                <NavLink
+                    className={({ isActive }) => {
+                        return isActive ? "active" : "";
+                    }}
+                    to="/contact">
                     <li>Contact</li>
-                </Link>
+                </NavLink>
             </ul>
             {isOpen ? (
                 <CloseRoundedIcon className="nav__burger" onClick={toggleNav} />
