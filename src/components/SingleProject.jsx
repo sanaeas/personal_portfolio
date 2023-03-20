@@ -14,7 +14,7 @@ function SingleProject({ title, img, githubUrl, deployUrl, tech }) {
                             <span
                                 key={index}
                                 className={`${
-                                    stech.split(" ").length == 1
+                                    stech.split(" ").length === 1
                                         ? stech
                                         : "other"
                                 }`}>
@@ -27,13 +27,15 @@ function SingleProject({ title, img, githubUrl, deployUrl, tech }) {
                     <a
                         href={githubUrl}
                         class="project__description-link"
-                        target="_blank">
+                        target="_blank"
+                        rel="noreferrer">
                         <div>Github</div>
                     </a>
                     <a
                         href={deployUrl}
                         class="project__description-link"
-                        target="_blank">
+                        target="_blank"
+                        rel="noreferrer">
                         <div>Website</div>
                     </a>
                 </div>
