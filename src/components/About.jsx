@@ -24,18 +24,18 @@ function About() {
                         </li>
                         <li>
                             <span>English</span>
-                            <span>Fluent</span>
+                            <span>Professional working proficiency</span>
                         </li>
                         <li>
                             <span>French</span>
-                            <span>Basic</span>
+                            <span>Limited working proficiency</span>
                         </li>
                     </ul>
                 </div>
             </div>
             <div className="skills__section">
                 <div className="skills__section--title">
-                    <h2>Web</h2>
+                    <h2>technology stack</h2>
                 </div>
                 <div className="skills-section__cards">
                     <div className="card">
