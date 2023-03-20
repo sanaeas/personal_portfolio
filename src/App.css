@@ -435,14 +435,16 @@ ul {
 }
 
 .about__section--title,
-.projects__section--title {
+.projects__section--title,
+.contact__section--title {
     width: 100%;
     border-bottom: 2px solid #222;
     margin-bottom: 20px;
 }
 
 .about__section--title h2,
-.projects__section--title h2 {
+.projects__section--title h2,
+.contact__section--title h2 {
     position: relative;
     font-size: 3.5rem;
     font-weight: 700;
@@ -682,6 +684,7 @@ ul {
 
 .project__tech {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 14px;
 }
@@ -714,4 +717,234 @@ ul {
     color: #fff;
     background-color: #222;
     transform: scale(0.98);
+}
+
+/* CONTACT */
+
+.contact {
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.contact .container {
+    height: 100vh;
+    min-height: 700px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.contact .container > div {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.left {
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0px 1.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+
+.form__wrapper {
+    max-width: 32rem;
+}
+
+.contact__form {
+    margin-top: 3rem;
+}
+
+.contact__input {
+    width: 100%;
+    background-color: hsla(208, 50%, 50%, 6.5%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    margin: 0 0 8px 0;
+    padding: 18px 26px;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    transition: 0.3s ease-in-out;
+    outline: none;
+    resize: none;
+    margin-bottom: 1.5rem;
+}
+
+.contact__input::placeholder {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.contact__input:focus {
+    background: rgba(255, 255, 255, 1);
+    color: #121212;
+    border: 1px solid rgba(34, 34, 34, 0.8);
+}
+
+.form__submit {
+    background-color: hsla(208, 50%, 50%, 6.5%);
+    padding: 14px 48px;
+    border-radius: 20px;
+    transition: 400ms ease-in-out;
+    border: none;
+    cursor: pointer;
+    border: 1px solid gray;
+}
+
+.form__submit span {
+    font-weight: 500;
+    color: #222;
+    font-size: 16px;
+}
+
+.form__submit:hover {
+    background-color: #222;
+}
+
+.form__submit:hover span {
+    color: #fff;
+}
+
+.danger,
+.success {
+    margin-top: 10px;
+}
+
+.danger {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+.right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+    pointer-events: none;
+    background: linear-gradient(90.21deg, #4a2fbd -5.91%, #aa367c 111%);
+}
+
+.image__wrapper {
+    position: relative;
+    grid-column: 2;
+}
+
+.image__wrapper .img {
+    position: absolute;
+    height: 50%;
+    left: 70%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wave-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 100%;
+    background-color: white;
+}
+
+.wave-wrap svg {
+    position: absolute;
+    height: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(100% - 2px);
+}
+
+#wave {
+    fill: white;
+    height: 100%;
+}
+
+.dashed-wave {
+    position: absolute;
+    z-index: 3;
+    height: 130%;
+    bottom: 60%;
+    left: -28px;
+    transform: translateY(50%);
+}
+
+#dashed-wave {
+    fill: none;
+    stroke: #222;
+    stroke-width: 1px;
+    stroke-dasharray: 6.5;
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 1000px) {
+    .contact__section--title h2 {
+        font-size: 2.5rem;
+    }
+
+    .contact__form {
+        margin-top: 1.9rem;
+    }
+
+    .contact__input {
+        border-radius: 17px;
+        font-size: 0.87rem;
+        padding: 1rem 1.2rem;
+    }
+
+    .contact__input::placeholder {
+        font-size: 0.91rem;
+    }
+
+    .form__submit {
+        padding: 10px 30px;
+        border-radius: 17px;
+    }
+
+    .form__submit span {
+        font-size: 0.87rem;
+    }
+
+    .dashed-wave {
+        bottom: 55%;
+        left: -10px;
+    }
+
+    #dashed-wave {
+        stroke-width: 0.7px;
+        stroke-dasharray: 6;
+    }
+
+    .wave-wrap {
+        transform: translateX(-10%);
+    }
+
+    .wave-wrap svg {
+        height: calc(110% + 10px);
+        transform: translate(-5%, -50%);
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .left {
+        padding-top: 0px;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .form__wrapper {
+        width: 100%;
+        padding: 1rem 0;
+    }
+
+    .right {
+        display: none;
+    }
 }
